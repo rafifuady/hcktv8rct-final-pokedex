@@ -7,14 +7,14 @@ export const fetchPkapi = () => ({
 export const fetchPkapiAction = () =>{
   return(dispatch) => {
     dispatch(fetchPkapi())
-    axios.get('https://pokeapi.co/api/v2/pokemon?limit=150')
+    axios.get('https://pokeapi.co/api/v2/pokemon?limit=151')
     .then(res => {
       // console.log(res)
       dispatch({
         type: 'FETCH_PKAPI_SUCCESS',
         payload: res.data.results
       })
-      console.log(res.data.results)
+      // console.log(res.data.results)
     })
     .catch(err => {
       dispatch({
@@ -39,7 +39,7 @@ export const fetchPokemonName = (params) => {
               type: 'FETCH_PKNAME_SUCCESS',
               payload:res.data,
             })
-          // console.log(res.data)
+          console.log(res.data)
           // console.log(res.data.types)
       })
       .catch(err => {

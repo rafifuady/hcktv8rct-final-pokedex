@@ -25,7 +25,7 @@ render() {
     <React.Fragment>
       <div>
         <Container>
-          
+          <Button href="/Pokedex">Back</Button>
           <Card>
             <Col className="text-center">
               <img src={pic.front_default} className="card-img" alt="pic" style={{width:"7em"}}></img>
@@ -36,7 +36,7 @@ render() {
                   <b>{selectedPkmn.name}</b>
                 </Col>
                 <Col>
-                  <b className="text-right">&nbsp;{"#"+selectedPkmn.order}</b> 
+                  <b className="text-right">&nbsp;{"#"+selectedPkmn.id}</b> 
                 </Col>
               </Row>
             </Card.Header>
@@ -136,7 +136,7 @@ render() {
                             <Col className="text-center">
                               <Button 
                                 className="text-uppercase" 
-                                style={{width:"7em",backgroundColora:"#b54",color:"white"}}>
+                                style={{width:"7em",backgroundColor:"#b54",color:"white"}}>
                                 {data.type.name}
                               </Button>
                             </Col>
